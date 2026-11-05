@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+out/
+build/
+*.tsbuildinfo
+*.vsix
+
+# Test and coverage
+coverage/
+.nyc_output/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+local.settings.json
+*.pem
+*.key
+*.pfx
+
+# Azure Functions
+.azurite/
+__azurite_db*__.json
+__blobstorage__/
+__queuestorage__/
+.python_packages/
+
+# Claude Code per-user settings
+.claude/settings.local.json
+
+# Editors and OS
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

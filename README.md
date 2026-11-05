@@ -1,4 +1,4 @@
-# AlchemAI for Azure DevOps
+# <picture><source media="(prefers-color-scheme: dark)" srcset="assets/branding/alchemai-mark.svg"><img src="assets/branding/alchemai-mark-light.svg" alt="" width="36" align="absmiddle"></picture> AlchemAI for Azure DevOps
 
 > Turns rough ideas into polished results.
 

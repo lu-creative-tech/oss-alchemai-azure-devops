@@ -37,7 +37,7 @@ Every pull request runs:
 
 | Check | Tool |
 | --- | --- |
-| Static analysis (SAST) | CodeQL, `security-extended` queries |
+| Static analysis (SAST) | CodeQL default setup |
 | Dependency vulnerabilities and licenses (SCA) | GitHub dependency review; only MIT, Apache-2.0, BSD, ISC, 0BSD and BlueOak-1.0.0 licenses are allowed, plus named exceptions for test-only tooling |
 | Secret scanning | gitleaks, plus GitHub secret scanning with push protection |
 | Dependency updates | Dependabot, weekly |

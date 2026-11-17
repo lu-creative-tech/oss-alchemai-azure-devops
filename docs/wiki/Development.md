@@ -43,7 +43,7 @@ Every pull request to `main` must pass:
 | `test` | `npm test` |
 | `dependency-review` | Fails on moderate or higher vulnerabilities and disallowed licenses |
 | `secret-scan` | gitleaks over the PR's commits |
-| `CodeQL` | Static analysis for JavaScript and TypeScript |
+| `CodeQL` | Static analysis for JavaScript and TypeScript (CodeQL default setup, a repository setting) |
 
 ## Spec-driven workflow
 

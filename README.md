@@ -65,7 +65,7 @@ See the [wiki](https://github.com/lu-creative-tech/oss-alchemai-azure-devops/wik
 
 ## Getting started
 
-Requires Node.js 24 (or 22.13+) and npm.
+Requires Node.js 24 or later and npm.
 
 ```bash
 npm ci

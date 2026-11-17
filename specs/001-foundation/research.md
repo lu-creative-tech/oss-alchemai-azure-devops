@@ -6,13 +6,20 @@ to fix a known vulnerability. TypeScript stays on 6.0.x because `typescript-esli
 
 ## R1. Node.js version
 
-- **Decision**: Node.js 24 (active LTS) in CI and `.nvmrc`; root `engines.node` set to `^22.13.0 || >=24`,
-  the narrowest range ESLint and Vitest support.
-- **Rationale**: The constitution requires the active LTS. Node 22 stays allowed so a contributor on
-  the previous LTS is not blocked, and so `backend` can fall back if the Azure Functions runtime lags.
-- **Alternatives considered**: Node 22 only (maintenance LTS, violates "active LTS"); CI matrix 22 + 24
-  (doubles CI time with no current requirement, YAGNI).
-- **Follow-up**: confirm Azure Functions Node 24 GA support when `backend` gets its first endpoint.
+- **Decision (revised 2026-11-17)**: Node.js 24 is the baseline: `.nvmrc`, CI, `engines.node` `>=24`
+  and `@types/node` 24.x. Node 22 is dropped.
+- **Rationale**: `@types/node` and `engines` must match the oldest Node the code runs on in
+  production, which is the backend on Azure Functions. Node 24 is the newest LTS that Azure
+  Functions supports as GA (until 30 April 2028). Node 26 became the active LTS on 28 October 2026,
+  but Azure Functions offers it only as a Linux preview, so it cannot be the baseline yet. Node 22
+  reaches end of life on 30 April 2027.
+- **Correction**: the original decision called Node 24 the "active LTS"; it entered maintenance on
+  20 October 2026. The constitution's "active LTS" wording conflicts with Azure Functions support and
+  needs a separate amendment.
+- **Alternatives considered**: Node 26 baseline (Azure Functions preview only); keeping Node 22
+  (end of life in April 2027); CI matrix 24 + 26 (no current requirement, YAGNI).
+- **Follow-up**: move the baseline to Node 26, including `@types/node` 26, when Azure Functions
+  makes it GA. Dependabot ignores `@types/node` majors, so this is a deliberate upgrade.
 
 ## R2. Package layout and naming
 

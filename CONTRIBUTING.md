@@ -35,7 +35,7 @@ What you expected to happen.
 - AlchemAI version: [e.g., 1.0.0]
 - Azure DevOps: [e.g., Services, or Server 2022]
 - Browser: [e.g., Edge 130]
-- Function App runtime: [e.g., Node.js 22.x]
+- Function App runtime: [e.g., Node.js 24.x]
 
 **Additional context**
 Add any other context about the problem.
@@ -93,7 +93,7 @@ cd oss-alchemai-azure-devops
 git remote add upstream https://github.com/lu-creative-tech/oss-alchemai-azure-devops.git
 ```
 
-Requires Node.js 24 (see `.nvmrc`); Node.js 22.13+ also works.
+Requires Node.js 24 or later (see `.nvmrc`). Node.js 24 is the baseline because it is the newest LTS that Azure Functions supports as GA.
 
 ```bash
 # Install all workspace packages (contracts, backend, extension)

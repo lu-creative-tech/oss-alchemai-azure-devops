@@ -13,7 +13,7 @@ Dependabot for npm and Actions. Packages contain placeholder modules and smoke t
 
 ## Technical Context
 
-**Language/Version**: TypeScript (latest stable, `strict`) on Node.js 24 active LTS; `engines >=22` (R1)
+**Language/Version**: TypeScript (latest stable, `strict`) on Node.js 24, the newest LTS GA on Azure Functions; `engines >=24` (R1, revised)
 
 **Primary Dependencies** (all dev): `typescript`, `eslint`, `@eslint/js`, `typescript-eslint`,
 `globals`, `vitest` (R4, R5, R7)

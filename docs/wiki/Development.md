@@ -4,7 +4,7 @@ How to work on AlchemAI itself. Read the [Contributing Guide](https://github.com
 
 ## Prerequisites
 
-- Node.js 24 (see `.nvmrc`); Node.js 22.13+ also works
+- Node.js 24 or later (see `.nvmrc`); 24 is the newest LTS that Azure Functions supports as GA
 - npm 10+
 - Git
 

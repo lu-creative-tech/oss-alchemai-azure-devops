@@ -5,7 +5,7 @@ check names: [contracts/ci-checks.md](./contracts/ci-checks.md).
 
 ## Prerequisites
 
-- Node.js 24 (or 22), npm 10+
+- Node.js 24 or later, npm 10+
 - Git, and maintainer access to the GitHub repository for the settings step
 
 ## 1. Local checks (US1)

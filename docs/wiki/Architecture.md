@@ -77,5 +77,5 @@ packages/
 └── extension/   # Azure DevOps extension
 docs/wiki/       # this wiki (synced on merge to main)
 specs/           # Spec Kit feature specs, plans and tasks
-.github/         # CI, Dependabot, wiki sync
+.github/         # CI, CodeQL, Dependabot, wiki sync
 ```

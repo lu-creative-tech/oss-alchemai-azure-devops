@@ -34,8 +34,9 @@ Make each change temporarily, run the matching script, confirm it fails, then re
 
 ## 3. Repository settings (maintainer, one time)
 
-- Settings → Code security: enable Dependabot alerts, secret scanning and push protection; keep
-  CodeQL default setup enabled, with the query suite set to Extended.
+- Settings → Advanced Security (`/settings/security_analysis`): enable Dependabot alerts, secret
+  scanning and push protection; keep CodeQL **default setup disabled** (the `codeql.yml` workflow
+  is used instead, and GitHub rejects its results while default setup is on).
 - Settings → Branches → `main`: require a PR, one approval from CODEOWNERS, and the checks in
   [ci-checks.md](./contracts/ci-checks.md).
 

@@ -39,6 +39,6 @@ listing only `@alchemai/contracts` keep the build graph aligned with the rule.
 | `test` | `ci.yml` | PR, push `main` | any Vitest failure |
 | `secret-scan` | `ci.yml` | PR, push `main` | gitleaks finds a secret |
 | `dependency-review` | `ci.yml` | PR | vulnerable dependency (moderate+) or disallowed license |
-| `CodeQL` | default setup (repo setting) | PR, push `main`, weekly | CodeQL alert at or above the repo's code scanning threshold |
+| `CodeQL` (`analyze`) | `codeql.yml` | PR, push `main`, weekly | CodeQL alert per repo alert settings |
 
 See [contracts/ci-checks.md](./contracts/ci-checks.md) for the stable names branch protection relies on.

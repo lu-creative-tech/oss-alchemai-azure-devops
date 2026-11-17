@@ -45,7 +45,7 @@ required, permissive-licensed dependencies only
 | IV. Agent-Agnostic Backend | Pass | `contracts` package created as the typed, versioned contract home (`CONTRACT_VERSION`); no agent SDK added |
 | V. Type Safety and Simplicity | Pass | `strict` + extra flags; lint errors on `any` and `!`; no formatter or extra tooling beyond the issue (R6) |
 | VI. Testing | Pass | Vitest wired; smoke test per package; CI blocks merge on failure; no real providers |
-| VII. Security | Pass | CodeQL default setup (SAST), dependency review + Dependabot (SCA), gitleaks + GitHub secret scanning |
+| VII. Security | Pass | CodeQL (SAST), dependency review + Dependabot (SCA), gitleaks + GitHub secret scanning |
 | VIII. Dependencies and Licensing | Pass | All dev deps MIT/Apache-2.0/BSD; license allow-list enforced in CI (R10); each dep justified in PR |
 | IX. Workflow and Versioning | Pass | Branch `feature/3-foundation` per CONTRIBUTING.md; Conventional Commits; `CHANGELOG.md` Unreleased entry |
 
@@ -111,6 +111,7 @@ packages/
 ├── dependabot.yml           # npm + github-actions, weekly, grouped
 └── workflows/
     ├── ci.yml               # typecheck, lint, test, secret-scan, dependency-review
+    ├── codeql.yml           # javascript-typescript, security-extended, weekly
     └── wiki.yml             # publishes docs/wiki/ to the GitHub wiki on merge to main
 
 docs/wiki/                   # wiki source pages (FR-014)

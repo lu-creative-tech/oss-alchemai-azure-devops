@@ -105,7 +105,7 @@ PRs on its schedule.
 - **FR-006**: The root MUST expose `typecheck`, `lint` and `test` scripts.
 - **FR-007**: CI MUST run typecheck, lint and test on every pull request to `main` and every push to
   `main`, as separately reported checks.
-- **FR-008**: CodeQL (SAST) MUST analyze JavaScript/TypeScript, via GitHub's CodeQL default setup, on pull requests, pushes to `main`
+- **FR-008**: CI MUST run CodeQL (SAST) for JavaScript/TypeScript on pull requests, pushes to `main`
   and on a weekly schedule.
 - **FR-009**: CI MUST run dependency review (SCA) on pull requests, failing on known vulnerabilities
   and on licenses outside MIT, Apache-2.0, BSD-2-Clause, BSD-3-Clause, ISC, 0BSD and BlueOak-1.0.0;

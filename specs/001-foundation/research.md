@@ -84,12 +84,12 @@ to fix a known vulnerability. TypeScript stays on 6.0.x because `typescript-esli
 
 ## R9. SAST
 
-- **Decision (revised)**: CodeQL **default setup** (repository setting), which is already enabled on
-  the repository; no CodeQL workflow. GitHub rejects advanced-setup results while default setup is
-  on, and the maintainers chose to keep default setup. Recommended: set its query suite to Extended.
-- **Original decision (superseded)**: CodeQL advanced setup in `.github/workflows/codeql.yml`, language
+- **Decision**: CodeQL advanced setup in `.github/workflows/codeql.yml`, language
   `javascript-typescript`, `build-mode: none`, query suite `security-extended`, on PRs, pushes to
   `main` and weekly.
+- **History**: default setup was briefly kept instead, but it had been enabled before `main` held any
+  JavaScript/TypeScript, so it detected no languages and could not be edited; it is now disabled.
+  Default setup MUST stay disabled, because GitHub rejects advanced-setup results while it is on.
 - **Rationale**: Versioned in the repo and reviewable, unlike default setup; `security-extended`
   suits code that handles tokens.
 - **Alternatives considered**: CodeQL default setup (settings-only, not visible in review); Semgrep

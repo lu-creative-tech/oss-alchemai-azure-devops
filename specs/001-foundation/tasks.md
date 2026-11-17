@@ -121,7 +121,7 @@ so their `ci.yml` tasks run sequentially.
 - [X] T031 Draft the PR description (Conventional Commit title, e.g. `feat: set up monorepo and CI foundation`, closes #3) listing every new dev dependency with license, version and maintenance status (Constitution VIII), and the maintainer settings from `specs/001-foundation/quickstart.md` section 3; do not open the PR without explicit approval
 - [X] T033 [P] Write wiki pages in `docs/wiki/` (`Home.md`, `Architecture.md`, `Extension.md`, `Backend.md`, `Contracts.md`, `Configuration.md`, `Setup.md`, `Usage.md`, `Security-and-Data.md`, `Development.md`, `_Sidebar.md`), marking planned parts with a status note (FR-014)
 - [X] T034 Create `.github/workflows/wiki.yml`: on push to `main` touching `docs/wiki/**` and on `workflow_dispatch`, job `publish` with `contents: write` only, clones `<repo>.wiki.git`, mirrors `docs/wiki/` with `rsync --delete`, commits as `github-actions[bot]` and pushes only when changed; link the wiki from `README.md` and `CONTRIBUTING.md`
-- [ ] T032 After the PR is open and approved to run: walk through `specs/001-foundation/quickstart.md` section 4 and record results in the PR
+- [X] T032 After the PR is open and approved to run: walk through `specs/001-foundation/quickstart.md` section 4 and record results in the PR (all checks pass on PR #9; fake secret failed only `secret-scan` on PR #10; lint-error and GPL-dependency runs skipped, lint covered locally by T019)
 
 ---
 

@@ -1,0 +1,9 @@
+{
+  "name": "@alchemai/extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@alchemai/contracts": "0.1.0"
+  }
+}

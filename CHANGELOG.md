@@ -10,3 +10,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - Repository setup: license, README, contributing guide, code of conduct and security policy.
 - Spec Kit setup for spec-driven development, with the project constitution v1.0.0.
+- npm workspaces monorepo (`contracts`, `backend`, `extension`) with strict TypeScript, ESLint and Vitest.
+- CI with typecheck, lint, tests, CodeQL, dependency review, secret scanning and Dependabot.
+- Wiki pages in `docs/wiki/` covering architecture, components, configuration, setup, usage, security and development, published to the GitHub wiki on merge to `main`.

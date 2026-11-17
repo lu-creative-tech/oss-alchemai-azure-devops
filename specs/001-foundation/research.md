@@ -14,8 +14,8 @@ to fix a known vulnerability. TypeScript stays on 6.0.x because `typescript-esli
   but Azure Functions offers it only as a Linux preview, so it cannot be the baseline yet. Node 22
   reaches end of life on 30 April 2027.
 - **Correction**: the original decision called Node 24 the "active LTS"; it entered maintenance on
-  20 October 2026. The constitution's "active LTS" wording conflicts with Azure Functions support and
-  needs a separate amendment.
+  20 October 2026. The constitution's "active LTS" wording conflicted with Azure Functions support
+  and was amended in constitution v1.0.1.
 - **Alternatives considered**: Node 26 baseline (Azure Functions preview only); keeping Node 22
   (end of life in April 2027); CI matrix 24 + 26 (no current requirement, YAGNI).
 - **Follow-up**: move the baseline to Node 26, including `@types/node` 26, when Azure Functions

@@ -2,7 +2,7 @@
 
 > **Status:** package skeleton exists (`packages/backend`); the Function App, endpoints and adapters are planned in [#4](https://github.com/lu-creative-tech/oss-alchemai-azure-devops/issues/4) and [#5](https://github.com/lu-creative-tech/oss-alchemai-azure-devops/issues/5).
 
-The backend is an Azure Function App (Node.js active LTS, TypeScript) that **you deploy in your own Azure subscription**. It is the only part of AlchemAI that talks to an AI provider and the only place model keys exist.
+The backend is an Azure Function App (Node.js 24, the newest LTS that Azure Functions supports as GA; TypeScript) that **you deploy in your own Azure subscription**. It is the only part of AlchemAI that talks to an AI provider and the only place model keys exist.
 
 ## Endpoints
 

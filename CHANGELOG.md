@@ -17,3 +17,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Changed
 
 - Node.js 24 is the minimum supported version, matching the newest LTS that Azure Functions supports as GA.
+- Constitution v1.0.1: the backend targets the newest Node.js LTS that Azure Functions supports as GA, instead of the active LTS.

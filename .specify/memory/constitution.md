@@ -116,7 +116,8 @@ freely redistributable and secure.
 ## Technology Stack and Constraints
 
 - **Extension**: TypeScript, Azure DevOps Extension SDK, published to the Visual Studio Marketplace.
-- **Backend**: Azure Functions on Node.js (active LTS), TypeScript.
+- **Backend**: Azure Functions on Node.js (the newest LTS version that Azure Functions supports as
+  generally available), TypeScript.
 - **Agents**: behind the agent adapter interface (Principle IV); available adapters are listed in the
   README.
 - **Platforms**: Azure DevOps Services; Azure DevOps Server support is decided per feature spec.
@@ -152,4 +153,4 @@ is complete.
 - Feature specs, plans and tasks generated with Spec Kit MUST pass the constitution check before
   implementation.
 
-**Version**: 1.0.0 | **Ratified**: 2026-11-03 | **Last Amended**: 2026-11-03
+**Version**: 1.0.1 | **Ratified**: 2026-11-03 | **Last Amended**: 2026-11-17

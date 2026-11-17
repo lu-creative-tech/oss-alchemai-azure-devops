@@ -47,13 +47,13 @@ Features marked **(MVP)** are part of the first release. Everything else comes l
 ## Architecture
 
 ```
-Azure DevOps extension (browser)  ──►  Self-hosted Function App  ──►  AI agent (Claude Code first)
+Azure DevOps extension (browser)  ──►  Self-hosted Function App  ──►  AI agent (Claude API first)
         review-before-apply                one endpoint per feature
                                            model keys stay here
 ```
 
 - **Extension:** UI contributions in Repos, Boards, Pipelines and Releases, plus an admin configuration page.
-- **Backend:** Azure Function App with one endpoint per feature and an agent adapter layer, so agents other than Claude Code can be added later.
+- **Backend:** Azure Function App with one endpoint per feature and an agent adapter layer. The first adapter calls the Claude API; others, such as Claude Code, can be added later.
 - **Configuration:**
   - Function App endpoint **(MVP)**
   - Authentication type **(MVP)**
@@ -61,9 +61,20 @@ Azure DevOps extension (browser)  ──►  Self-hosted Function App  ──►
   - Enable per project, with project-level overrides for style, language and extra instructions
 - **Security:** model keys live only in the Function App, never in the browser.
 
+See the [wiki](https://github.com/lu-creative-tech/oss-alchemai-azure-devops/wiki) for the architecture, each component, setup and usage.
+
 ## Getting started
 
-Setup, build and test instructions will be added with the first MVP.
+Requires Node.js 24 (or 22.13+) and npm.
+
+```bash
+npm ci
+npm run typecheck
+npm run lint
+npm test
+```
+
+The repository is an npm workspaces monorepo with three packages: `contracts` (shared typed contracts), `backend` (Function App) and `extension` (Azure DevOps extension). See the [Contributing Guide](./CONTRIBUTING.md) for details.
 
 **Tech stack:** TypeScript, Node.js, Azure Functions.
 

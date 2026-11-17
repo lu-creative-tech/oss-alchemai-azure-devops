@@ -93,7 +93,20 @@ cd oss-alchemai-azure-devops
 git remote add upstream https://github.com/lu-creative-tech/oss-alchemai-azure-devops.git
 ```
 
-Build and test instructions will be added with the first MVP.
+Requires Node.js 24 (see `.nvmrc`); Node.js 22.13+ also works.
+
+```bash
+# Install all workspace packages (contracts, backend, extension)
+npm ci
+
+# Run the same checks as CI
+npm run typecheck
+npm run lint
+npm test
+```
+
+The root scripts are the contract for local work and CI; see
+[specs/001-foundation/contracts/scripts.md](./specs/001-foundation/contracts/scripts.md).
 
 ### Standards
 
@@ -103,6 +116,9 @@ Build and test instructions will be added with the first MVP.
 - Keep functions small and focused
 - Use meaningful variable and function names
 - Never commit secrets, API keys, or `local.settings.json`
+- `backend` and `extension` may import from `contracts`, never from each other (enforced by lint)
+- Pull requests must pass typecheck, lint, test, CodeQL, dependency review and secret scan
+- The [wiki](https://github.com/lu-creative-tech/oss-alchemai-azure-devops/wiki) is generated from `docs/wiki/` on every merge to `main`; edit the files there, not in the GitHub wiki
 
 ## Git Workflow
 
